@@ -1,69 +1,90 @@
-# React + TypeScript + Vite
+# Real Estate Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Material UI frontend application for browsing and filtering real estate properties.  
+This project consumes the **.NET + MongoDB backend API**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- Built with **React + TypeScript**  
+- Styled with **Material UI (MUI)**  
+- Property listing with:
+  - Name filter
+  - Address filter
+  - Price range filter
+- Property detail view  
+- API integration with backend  
+- Unit tests with **Jest + React Testing Library**  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 Tech Stack
+- [React 19](https://react.dev) with Vite
+- [TypeScript](https://www.typescriptlang.org/)
+- [Material UI](https://mui.com/)
+- [Axios](https://axios-http.com/) for API calls
+- [Jest](https://jestjs.io/) + [Testing Library](https://testing-library.com/) for unit testing
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📦 Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone repository and install dependencies:
+
+```bash
+git clone https://github.com/aleveri/real-state-fe.git
+cd real-state-fe
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ▶️ Running the App
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Start development server:
+```bash
+npm run dev
 ```
+
+Open in browser:  
+👉 [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🧪 Running Tests
+
+Unit tests are written with Jest and Testing Library.
+
+Run all tests:
+```bash
+npm test
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the project root:
+
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/       # Reusable components (PropertyCard, Filters, etc.)
+ ├── pages/            # Pages (PropertyList, PropertyDetails)
+ ├── services/         # API calls
+ ├── types/            # TypeScript interfaces
+ ├── tests/            # Unit tests
+ └── App.tsx           # Root component
+```
+
+---
+
+## 👨‍💻 Author
+**Andres Leveri**

@@ -26,8 +26,6 @@ export const getProperties = async (filters: {
     maxPrice = 999999999,
     pageNumber = 1,
     pageSize = 10,
-    sortBy = "Price",
-    sortDirection = "asc",
   } = filters;
 
   const url = `${API_URL}/filter/${name}/${address}/${minPrice}/${maxPrice}/${pageNumber}/${pageSize}`;

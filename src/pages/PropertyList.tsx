@@ -25,8 +25,8 @@ export default function PropertyList() {
       </Typography>
       <Filters onFilter={setFilters} />
       <Grid container spacing={3}>
-        {properties.map((p, idx) => (
-          <Grid item key={idx} xs={12} sm={6} md={4}>
+        {properties.map((p) => (
+          <Grid container spacing={3}>
             <PropertyCard property={p} />
           </Grid>
         ))}
